@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box-gen</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="pop_up">
+      <code id="gen_code" style="font-size:xx-large"></code>
+    </div>
+    <div class="main">
+      <div class="part1">
+        <div class="field" style="height:80px ;">
+          <label>Height: <span id="h_dis">400px</span></label>
+          <input type="range" min="100" max="500" value="400" id="height" />
+        </div>
+        <div class="field" style="height:80px;">
+          <label>Width: <span id="w_dis">400px</span></label>
+          <input type="range" min="100" max="500" value="400" id="width" />
+        </div>
+        <div class="field" style="height: 180px;">
+          <label>Border: <span id="b_dis">0px</span></label>
+          <div class="merge">
+            <input type="color" id="b_color" value="orange" />
+            <select id="b_type">
+              <option value="none">none</option>
+              <option value="dotted">dotted</option>
+              <option value="dashed">dashed</option>
+              <option value="solid">solid</option>
+              <option value="double">double</option>
+              <option value="groove">groove</option>
+              <option value="ridge">ridge</option>
+              <option value="inset">inset</option>
+              <option value="outset">outset</option>
+            </select>
+          </div>
+          <input type="range" min="1" max="100" value="0" id="border" />
+        </div>
+        <div class="field" style="height:80px ;">
+          <label>Border-radius: <span id="br_dis">0px</span></label>
+          <input type="range" min="1" max="100" value="0" id="border_r" />
+        </div>
+        <div class="field" style="height:100px ;">
+         <label>Color: <span id="c_dis">Orange</span></label>
+          <input type="color" id="color" />
+        </div>
+        <div class="field" style="flex-direction: row;height: 60px;" >
+            <label style="width: 80%;">Box-shadow</label>
+            <input type="checkbox" style="height: 30px;" id="check"/>
+        </div>
+        <div class="shad-field hide" style="height:80px ;">
+            <label>Horizental length: <span id="hl_dis">10px</span></label>
+            <input type="range" min="-200" max="200" value="10" id="h_length" />
+        </div>
+        <div class="shad-field hide" style="height:80px ;">
+            <label>Vertical length: <span id="wl_dis">10px</span></label>
+            <input type="range" min="-200" max="200" value="10" id="w_length" />
+        </div>
+        <div class="shad-field hide" style="height:80px ;">
+            <label>Blur radius: <span id="blur_dis">5px</span></label>
+            <input type="range" min="5" max="200" value="5" id="blur_radius" />
+        </div>
+        <div class="shad-field hide" style="height:80px ;">
+            <label>Spread radius: <span id="sr_dis">0px</span></label>
+            <input type="range" min="-200" max="200" value="0" id="spread_radius" />
+        </div>
+
+        <button id="generate_code">Generate Code</button>
+      </div>
+      <div class="part2">
+        <div class="box"></div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
